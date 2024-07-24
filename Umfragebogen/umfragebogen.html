@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Steffi's Cupcakes Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <h1 id="title">Steffi's Cupcakes Survey Form</h1>
+  <p id="description">Thank you for taking the time to help me improve the platform</p>
+  <form id="survey-form">
+    <fieldset>
+    <label for="name" id="name-label">Name <input id="name" name="name" type="text" placeholder="Enter Your Name" required></label>
+    <label for="email" id="email-label">Email <input id="email" email="email" type="email" placeholder="Enter Your Email" required></label>
+    <label for="age" id="number-label">Age <input id="number"  type="number" min="18" max="60" placeholder="Age" required></label>
+    </fieldset>
+    <fieldset>
+    <label>Which option best describes your current role?<select id="dropdown">
+      <option value="">(select one)</option>
+      <option value="1">Hobby bakers</option>
+      <option value="2">Bakers Apprentice</option>
+      <option value="3">Professional bakers</option></select></label>
+    </fieldset>
+    <fieldset>
+    <legend>Would you recommend Steffi's Cupcakes to a friend?</legend>
+    <label for="recommend"><input id="recommend" class="inline" value="definitely" name="enjoy" type="radio">Definitely</label>
+    <label for="recommend"><input id="recommend" class="inline" value="maybe" name="enjoy" type="radio">Maybe</label>
+    <label for="recommend"><input id="recommend" class="inline" value="not sure" name="enjoy" type="radio">Not sure</label>
+    </fieldset>
+    <fieldset>
+    <legend>Which taste do you prefer to use?</legend>
+      <label for="prefer"><input id="prefer" class="inline" type="checkbox" value="fruit"> Fruit</label>
+      <label for="prefer"><input id="prefer" class="inline" type="checkbox" value="chocolate"> Chocolate</label>
+      <label for="prefer"><input id="prefer" class="inline" type="checkbox" value="nuts"> Nuts</label>
+      <label for="prefer"><input id="prefer" class="inline" type="checkbox" value="coconuts"> Coconuts</label>
+      <label for="prefer"><input id="prefer" class="inline" type="checkbox" value="cheesecake"> Cheese Cake</label>
+    </label>
+    </fieldset>   
+  	<textarea id="comments" placeholder="Enter any additional comments here"></textarea>
+  	<input id="submit" type="submit" value="Submit">
+    </form>
+  </body>
+</html>
