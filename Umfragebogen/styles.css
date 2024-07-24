@@ -3,12 +3,13 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #fff0f5;
-  color:  #68228b;
+  color: #68228b;
   font-family: Chalkduster, fantasy;
   font-size: 20px;
 }
 
-h1, p {
+h1,
+p {
   margin: 1em auto;
   text-align: center;
 }
@@ -40,7 +41,8 @@ select {
   font-size: 16px;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: #fff0f5;
   border: 1px solid #68228b;
   color: #68228b;
