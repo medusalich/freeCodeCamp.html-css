@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Dokumentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Git Dokumentation</header>
+        <a href="#einleitung" class="nav-link">Einleitung</a>
+        <a href="#quick_guide" class="nav-link">Quick Guide</a>
+        <a href="#begriffserklärung" class="nav-link">Begriffserklärung</a>
+        <a href="#szenarios" class="nav-link">Szenarios</a>
+        <a href="#funktionen" class="nav-link">Funktionen</a>
+        <a href="#referenzen" class="nav-link">Referenzen</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="einleitung">
+            <header>Einleitung</header>
+            <p>Git ist ein weit verbreitetes Versionskontrollsystem, das Entwicklern hilft, Änderungen an ihrem Code zu
+                verfolgen und zu verwalten. Es wurde ursprünglich von Linus Torvalds, dem Schöpfer des
+                Linux-Betriebssystems, entwickelt. Mit Git können mehrere Personen gleichzeitig an einem Projekt
+                arbeiten, ohne sich gegenseitig in die Quere zu kommen.</p>
+            <p>Das Besondere an Git ist, dass es eine lokale Kopie des gesamten Projekts auf dem Computer eines
+                Entwicklers speichert. Das bedeutet, dass man auch offline arbeiten kann und alle Änderungen, die man
+                vornimmt, lokal festgehalten werden. Wenn man bereit ist, kann man seine Änderungen mit anderen teilen,
+                indem man sie in ein zentrales Repository hochlädt.</p>
+        </section>
+        <section class="main-section" id="quick_guide">
+            <header>Quick Guide</header>
+            <p>Hier ist eine kurze Anleitung, um Git in einem neuen Projekt zu verwenden:</p>
+            <ol>
+                <li>Installation:</li>
+                <p>Lade Git von <a href="git-scm.com">git-scm.com</a> herunter und installiere es. (Windows, macOS,
+                    Linux).</p>
+                <li>Name und Email einrichten:</li>
+                <code>
+              <p>git config --global user.name "Vor- und Nachname"<br>
+              git config --global user.email "beispiel@adresse.de"</p>
+            </code>
+                <li>Repository erstellen:</li>
+                <code>
+              <p>git init</p>
+            </code>
+                <li>Status überprüfen:</li>
+                <code>
+              <p>git status</p>
+            </code>
+                <li>Datei hinzufügen:</li>
+                <code>
+              <p>git add &lt;Dateiname&gt;</p>
+            </code>
+                <li>Committen:</li>
+                <code>
+              <p>git commit -m "Text für commit"</p>
+            </code>
+            </ol>
+        </section>
+        <section class="main-section" id="begriffserklärung">
+            <header>Begriffserklärung</header>
+            <ul>
+                <li>Repository</li>
+                <p>Das Repository(Repo) ist ein Verzeichnis, in dem die Projekte und deren Versionshistorie gespeichert
+                    werden. Es handelt sich dabei um eine Art „Datenbank“, die alle Änderungen, die an einer Datei
+                    vorgenommen wurde, festhält.</p>
+                <li>Commits (Versionen)</li>
+                <p>Ein Commit ist ein Snapshot des aktuellen Zustands eines Projekts, der alle Änderungen speichert und
+                    es ermöglicht, die Historie der Entwicklung nachzuvollziehen und zu einem früheren Zustand
+                    zurückzukehren.</p>
+                <li>Merge</li>
+                <p>Ein Merge ist der Prozess, bei dem die Änderungen aus einem Branch in einen anderen Branch integriert
+                    werden, um die Entwicklung zusammenzuführen und die Historie der Änderungen zu vereinen.</p>
+                <li>Branches (Entwicklungszweige)</li>
+                <p>Beim Branch wird ermöglicht, verschiedene Entwicklungsstränge innerhalb eines Projekts zu erstellen,
+                    sodass Änderungen unabhängig und parallel getestet und entwickelt werden können, ohne die
+                    Hauptversion zu beeinträchtigen.</p>
+        </section>
+        <section class="main-section" id="szenarios">
+            <header>Szenarios</header>
+            <ul>
+                <li>Ein Repository in der Befehlszeile erstellen, committen und evtl. auf GitHub stellen:</li>
+                <code>
+              <p>mkdir mein_projekt <br>
+                 cd mein_projekt <br>
+                 echo "# Text" >> README.md <br>
+                 git init <br>
+                 git add README.md <br>
+                 git commit -m "Mein Erster commit" <br>
+                 git push &lt;URL z.b. von GitHub&gt; <br>
+                 git status
+              </p>
+            </code>
+                <li>Bestehendes Repository klonen:</li>
+                <code>
+              <p>git clone &lt;URL z.b. von GitHub&gt;</p>
+            </code>
+                <li>Branch erstellen oder wechseln:</li>
+                <code>
+              <p>git branch feature-branch</p>
+              <p>git checkout feature-branch</p>              
+            </code>
+
+                <li>Zurück zum Haupt-Branch wechseln:</li>
+                <code>
+              <p>git checkout main</p>
+            </code>
+                <li>Branch mergen:</li>
+                <code>
+              <p>git checkout main <br>
+                 git pull origin main <br>
+                 git merge feature-branch <br>
+                 git push origin main</p>
+            </code>
+            </ul>
+        </section>
+        <section class="main-section" id="funktionen">
+            <header>Funktionen</header>
+            <p>Der Befehl <code>git --help</code> zeigt die Hilfe für Git an. Er öffnet die Dokumentation zu Git in
+                einem Texteditor oder im Terminal. Du kannst auch spezifische Befehle nachschlagen, z.B.
+                <code>git commit --help</code>, um Hilfe zu dem commit-Befehl zu erhalten.</p>
+            <p><code>git --force</code> ist ein Befehl, der in Git verwendet wird, um eine Aktion gegen die normalen
+                Sicherheitsvorkehrungen durchzusetzen. Der häufigste Anwendungsfall für <code>--force</code> ist beim
+                Befehl git push, also beim Hochladen von Änderungen zu einem Remote-Repository.<br>
+                <b>ACHTUNG</b> Die Verwendung von <code>--force</code> kann gefährlich sein, da sie dazu führen kann,
+                dass die Arbeit anderer Teammitglieder verloren geht, wenn du ihre Commits überschreibst.
+            </p>
+        </section>
+        <section class="main-section" id="referenzen">
+            <header>Referenzen</header>
+            <p><a href="https://git-scm.com/doc">Git Offizielle Dokumentation<a></p>
+        </section>
+    </main>
+</body>
+
+</html>
